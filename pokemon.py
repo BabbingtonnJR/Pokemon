@@ -43,7 +43,7 @@ while jornada == True:
         captura = input(f'Você deseja captura-lo? Você tem 3 chances (Sim/Não)\n-> ')
         if captura == 'Sim':
             for i in range(1, 4):
-                sorte = random.randint(1, 101)
+                sorte = random.randint(1, 100)
                 pokebolas -= 1
                 if sorte < 51 and i > 0 and pokebolas > 0:
                     pokedex.append(pokeFloresta[pokeAleatorio])
@@ -79,7 +79,7 @@ while jornada == True:
         captura = input(f'Você deseja captura-lo? Você tem 3 chances (Sim/Não)\n-> ')
         if captura == 'Sim':
             for i in range(1, 4):
-                sorte = random.randint(1, 101)
+                sorte = random.randint(1, 100)
                 pokebolas -= 1
                 if sorte < 36 and i > 0 and pokebolas > 0:
                     pokedex.append(pokeCaverna[pokeAleatorio])
