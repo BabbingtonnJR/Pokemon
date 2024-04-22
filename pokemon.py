@@ -57,7 +57,7 @@ while introducao == True:
     jornada = True
     introducao = False
 while jornada == True:
-    jogo = input(f'\nOque deseja fazer?\n[1] Ir para a Floresta\n[2] Ir para a Caverna\n[3] Explorar\n[4] Pokedex\n[5] Sair (O jogo não será salvo)\n-> ')
+    jogo = input(f'\nO que deseja fazer?\n[1] Ir para a Floresta\n[2] Ir para a Caverna\n[3] Explorar\n[4] Pokedex\n[5] Sair (O jogo não será salvo)\n-> ')
     if jogo == '1' and pokebolas > 0:
         pokeAleatorio = random.randint(0, pokeFloresta.index('Moltres'))
         if pokeAleatorio in repetidosFloresta:
@@ -82,10 +82,12 @@ while jornada == True:
                     elif sorte > 50 and i == 1 and pokebolas > 0:
                         continuar = input(f'\nVocê não conseguiu pegar {pokeFloresta[pokeAleatorio]}, quer tentar denovo? Você tem mais 2 tentativas (Sim/Não)\n-> ')
                         if continuar == 'Não':
+                            captura = 'Não'
                             break
                     elif sorte > 50 and i == 2 and pokebolas > 0:
                         continuar = input(f'\nVocê não conseguiu pegar {pokeFloresta[pokeAleatorio]}, quer tentar denovo? Você tem mais 1 tentativa (Sim/Não)\n-> ')
                         if continuar == 'Não':
+                            captura = 'Não'
                             break
                     elif sorte > 50 and i == 3:
                         print(f'\n{pokeFloresta[pokeAleatorio]} fugiu\n')
@@ -128,10 +130,12 @@ while jornada == True:
                     elif sorte > 35 and i == 1 and pokebolas > 0:
                         continuar = input(f'\nVocê não conseguiu pegar {pokeCaverna[pokeAleatorio]}, quer tentar denovo? Você tem mais 2 tentativas (Sim/Não)\n-> ')
                         if continuar == 'Não':
+                            captura = 'Não'
                             break
                     elif sorte > 35 and i == 2 and pokebolas > 0:
                         continuar = input(f'\nVocê não conseguiu pegar {pokeCaverna[pokeAleatorio]}, quer tentar denovo? Você tem mais 1 tentativa (Sim/Não)\n-> ')
                         if continuar == 'Não':
+                            captura = 'Não'
                             break
                     elif sorte > 35 and i == 3:
                         print(f'\n{pokeCaverna[pokeAleatorio]} fugiu\n')
